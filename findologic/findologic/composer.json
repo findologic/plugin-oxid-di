@@ -1,0 +1,15 @@
+{
+  "name": "findologic/search",
+  "description": "This is the Findologic search module for OXID eShop.",
+  "type": "oxideshop-module",
+  "keywords": ["findologic", "search"],
+  "extra": {
+    "oxideshop": {
+      "target-directory": "findologic/findologic"
+    }
+  },
+  "require": {
+    "findologic/libflexport": "1.4.0",
+    "findologic/xml-export-schema": "^1.3"
+  }
+}
