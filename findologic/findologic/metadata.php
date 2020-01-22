@@ -35,7 +35,7 @@ $aModule = [
                  <p>What’s your CR? With our technology conversion rates up to 21% in search are possible!</p>'
 
     ],
-    'version' => '1.2.2',
+    'version' => '1.0.0',
     'author' => 'FINDOLOGIC GmbH',
     'url' => 'https://www.findologic.com',
     'email' => 'support@findologic.com',
