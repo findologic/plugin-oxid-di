@@ -1,4 +1,4 @@
-# FINDOLOGIC OXID 6 DI PLUGIN
+# FINDOLOGIC OXID 4 & 6 DI Plugin - libflexport only
 
   FINDOLOGIC OXID DI plug-in needs to be implemented in OXID eShop for successful implementation of FINDOLOGIC Search.
   
@@ -40,8 +40,8 @@
 
 1. Create a release if not already done.
 1. Manually zip all contents from the topmost `findologic` folder and name it
- `FINDOLOGIC_OXID6_x.x.x.zip`.
-1. Upload this zip file to Google Drive in folder `Development/Modul-Entwicklung/DI Module/OXID6/`.
+ `FINDOLOGIC_OXID_4_6_x.x.x.zip`.
+1. Upload this zip file to Google Drive in folder `Development/Modul-Entwicklung/DI Module/OXID 4 & 6/`.
 1. Log into https://exchange.oxid-esales.com and go to *My extensions*. The next
  step needs to be done for two plugins ("FINDOLOGIC DI - PE" & "FINDOLOGIC DI - CE").
 1. Click on the plugin and go to *Edit versions*, upload the zip file and select all
