@@ -7,9 +7,5 @@
     "oxideshop": {
       "target-directory": "findologic/findologic"
     }
-  },
-  "require": {
-    "findologic/libflexport": "1.4.0",
-    "findologic/xml-export-schema": "^1.3"
   }
 }

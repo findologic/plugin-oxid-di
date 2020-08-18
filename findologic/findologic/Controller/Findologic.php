@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__ . '/../Example/XmlExample.php';
-
 use OxidEsales\Eshop\Core\Exception\DatabaseConnectionException;
 
 class Findologic extends oxUBase
@@ -47,8 +45,14 @@ class Findologic extends oxUBase
         $this->storeId = $this->getStore($this->shopKey, $configShopKey);
         $this->validateInput();
 
-        $xmlExample = new XmlExample();
-        $xml = $xmlExample->createExport();
+        include_once __DIR__ . '/../../../findologic-export/findologic-export/FindologicExport.php';
+        if (!class_exists(FindologicExport::class)) {
+            // TODO: The export plugin should be available at docs.findologic.com.
+            echo 'The Export Plugin is not installed! You can download it here https://link';
+            return;
+        }
+        $export = new FindologicExport();
+        $xml = $export->startExport($this->shopkey, $this->start, $this->count);
 
         if (oxRegistry::getConfig()->getRequestParameter('validate', false)) {
             $this->validateXml($xml);
@@ -80,7 +84,7 @@ class Findologic extends oxUBase
         if (!$this->count || $this->count < 1) {
             $message .= 'Parameter "count" is missing or less than 1!<br>';
         }
-        
+
         if (!is_numeric($this->start) || !is_numeric($this->count)) {
             $message .= 'Parameters must be numeric values.<br> Please provide start and count values in precise format<br>';
         }
