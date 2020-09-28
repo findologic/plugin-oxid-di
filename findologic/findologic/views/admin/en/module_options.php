@@ -6,9 +6,9 @@ $languages = $oxLang->getLanguageArray();
 $options = array();
 $inputFields = array();
 foreach ($languages as $language) {
-    $options['SHOP_MODULE_LanguageList_'.$language->id] = $language->name;
-    $inputFields['SHOP_MODULE_FindologicShopkey_'.$language->id]
-        = "Enter Shopkey for {$language->name} language provided from FINDOLOGIC";
+    $options['SHOP_MODULE_LanguageList_'. $language->id] = $language->name;
+    $inputFields['SHOP_MODULE_FindologicShopkey_'. $language->id]
+        = "Shopkey for language '{$language->name}'";
 }
 
 $shopKeys = array();

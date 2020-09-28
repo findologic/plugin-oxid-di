@@ -1,21 +1,40 @@
-# FINDOLOGIC OXID 4 & 6 DI Plugin - libflexport only
+# Findologic OXID 4 & 6 DI Plugin - libflexport only
 
-  FINDOLOGIC OXID DI plug-in needs to be implemented in OXID eShop for successful implementation of FINDOLOGIC Search.
-  
-## INSTALLATION
+In order to use the Findologic service you need to install:
+* Findologic [plugin-oxid-di](https://github.com/findologic/plugin-oxid-di) for search & navigation platform.
+* Findologic [plugin-oxid-di-export](https://github.com/findologic/plugin-oxid-di-export/) for product export.
 
-  FINDOLOGIC OXID DI plug-in installation procedure is basically the same as for any other OXID plug-in. It can be summed up in a few simple steps:
-  * Plug-in content needs to copied into OXID folder called *“Modules”*
-  * File called *“findologic_export.php”* that can be found in plug-in root directory needs to be moved into root directory of OXID eshop
-  * After all this, in Admin panel under Extension → Modules, *“Findologic Search”* should be listed as one of available plug-ins
-  * After clicking on *“Findologic Search”*, on the lower part of the screen plug-in info should be displayed. In order for plug-in to be installed on the system one needs to click *“Activate”*
-  * After activation, small icon beside *“Findologic Search”* should become green, which indicates that plug-in is successfully installed on the system
-  * After clicking on *“Findologic Search”* on lower part of the screen, click on *“Settings”* tab, then click *“FINDOLOGIC Shop key”* and in the available field or fields (depends on how many languages shop has) insert SHOPKEY that is provided by FINDOLOGIC, and finally,  click *“Save”*
+## Installation
+
+See also [OXID documentation](https://docs.oxid-esales.com/developer/en/6.2/development/modules_components_themes/module/installation_setup/installation.html).
+
+* Copy the `findologic` folder to the plugin directory at `<shop_directory>/source/modules`.
+
+* Move the file `findologic/findologic/findologic_export.php` to `<shop_directory>/source`
+
+* Install module configuration: 
+```bash
+vendor/bin/oe-console oe:module:install-configuration source/modules/findologic/findologic
+```
+
+* Register module package in project composer.json:
+```bash
+cd <shop_directory>
+composer config repositories.findologic/findologic path source/modules/findologic/findologic
+composer require findologic/search
+```
+Important: In case you’ll be asked if you want to overwrite other module files, you need to select “No” for an answer to avoid changing files of other modules.
+
+* Open the OXID admin and activate the module Findologic - Search & Navigation Platform.
+
+* Click on Settings and insert the shop key provided by Findologic and press save.
   
-  **Note**: Shop key must be entered in valid format or error will be shown
-  * Finally, shop's cache must be cleared
+* Clear shop cache or remove tmp files with 
+```bash
+rm <shop_directory>/source/tmp/*
+```
   
-## WRITING EXPORT
+## Product export
 
   A functional export must be returned in the `init` function of `controllers/Findologic.php`
   
@@ -23,7 +42,7 @@
   
   Export documentation can be found [here](https://docs.findologic.com/doku.php?id=xml_export_documentation:XML_format)
   
-## RUNNING EXPORT
+## Run export
 
   Export is called via url that is something like this:
   

@@ -1,6 +1,6 @@
 {
   "name": "findologic/search",
-  "description": "This is the Findologic search module for OXID eShop.",
+  "description": "Findologic search and navigation module for OXID eShop.",
   "type": "oxideshop-module",
   "keywords": ["findologic", "search"],
   "extra": {

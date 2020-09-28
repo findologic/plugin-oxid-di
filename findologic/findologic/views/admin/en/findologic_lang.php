@@ -8,9 +8,9 @@ $sLangName  = 'English';
 
 $aLang = array(
     'charset' => 'UTF-8',
-    'SHOP_MODULE_GROUP_shopkey' => 'FINDOLOGIC Shop key',
-    'SHOP_MODULE_FindologicShopkey'   => 'Enter Shop Key provided from Findologic',
-    'WRONG_KEY_MESSAGE' => 'Invalid Shopkey',
+    'SHOP_MODULE_GROUP_shopkey' => 'Shop key',
+    'SHOP_MODULE_FindologicShopkey'   => 'Shop key',
+    'WRONG_KEY_MESSAGE' => 'Invalid shop key',
 );
 
 $aLang = array_merge($aLang, $options, $inputFields);
