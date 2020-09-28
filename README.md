@@ -1,4 +1,4 @@
-# Findologic OXID 4 & 6 DI Plugin - libflexport only
+# Findologic OXID 4 & 6 DI Plugin
 
 In order to use the Findologic service you need to install:
 * Findologic [plugin-oxid-di](https://github.com/findologic/plugin-oxid-di) for search & navigation platform.
