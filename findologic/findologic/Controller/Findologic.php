@@ -47,8 +47,7 @@ class Findologic extends oxUBase
 
         include_once __DIR__ . '/../../../findologic-export/findologic-export/FindologicExport.php';
         if (!class_exists(FindologicExport::class)) {
-            // TODO: The export plugin should be available at docs.findologic.com.
-            echo 'The Export Plugin is not installed! You can download it here https://link';
+            echo 'The Findologic - Export plugin is not installed! You can download it here: https://docs.findologic.com/lib/exe/fetch.php?media=integration_documentation:plugins:oxid_4_6_export_plugin.zip';
             return;
         }
         $export = new FindologicExport();
