@@ -8,7 +8,7 @@ $inputFields = array();
 foreach ($languages as $language) {
     $options['SHOP_MODULE_LanguageList_'.$language->id] = $language->name;
     $inputFields['SHOP_MODULE_FindologicShopkey_'.$language->id]
-        = "Geben Sie den von FINDOLOGIC zur Verfuegung gestellten Shopkey fuer die Sprache {$language->name} ein.";
+        = "Shopkey für Sprache '{$language->name}'.";
 }
 
 $shopKeys = array();
