@@ -28,7 +28,6 @@ composer require findologic/search --no-plugins --no-scripts
 
 * Open the OXID admin and activate the module Findologic - Search & Navigation Platform.
 * Click on Settings and insert the shop key provided by Findologic and press save.
-
 * Clear shop cache or remove tmp files with
 ```bash
 rm <shop_directory>/source/tmp/*
