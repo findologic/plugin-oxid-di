@@ -6,34 +6,7 @@ In order to use the Findologic service you need to install:
 
 ## Installation
 
-See also [OXID documentation](https://docs.oxid-esales.com/developer/en/6.2/development/modules_components_themes/module/tutorials/module_setup.html).
-
-* Copy the `findologic` folder to the plugin directory at `<shop_directory>/source/modules`.
-
-* Move the file `findologic/findologic/findologic_export.php` to `<shop_directory>/source`
-
-* Install module configuration: 
-```bash
-cd <shop_directory>
-vendor/bin/oe-console oe:module:install-configuration source/modules/findologic/findologic
-```
-
-* Register module package in project composer.json:
-```bash
-cd <shop_directory>
-composer config repositories.findologic/findologic path source/modules/findologic/findologic
-composer require findologic/search
-```
-Important: In case you’ll be asked if you want to overwrite other module files, you need to select “No” for an answer to avoid changing files of other modules.
-
-* Open the OXID admin and activate the module Findologic - Search & Navigation Platform.
-
-* Click on Settings and insert the shop key provided by Findologic and press save.
-  
-* Clear shop cache or remove tmp files with 
-```bash
-rm <shop_directory>/source/tmp/*
-```
+* See [Findologic docs](https://docs.findologic.com/doku.php?id=integration_documentation:plugin:en:direct_integration:oxid).
 
 ## Deployment & Release
 
