@@ -6,64 +6,7 @@ In order to use the Findologic service you need to install:
 
 ## Installation
 
-See also [OXID documentation](https://docs.oxid-esales.com/developer/en/6.2/development/modules_components_themes/module/tutorials/module_setup.html).
-
-* Copy the `findologic` folder to the plugin directory at `<shop_directory>/source/modules`.
-* Move the file `findologic/findologic/findologic_export.php` to `<shop_directory>/source`
-* Install module configuration: 
-```bash
-cd <shop_directory>
-vendor/bin/oe-console oe:module:install-configuration source/modules/findologic/findologic
-```
-
-* Register module package in project composer.json:
-```bash
-composer config repositories.findologic/findologic path source/modules/findologic/findologic
-composer require findologic/search --no-plugins --no-scripts
-```
-
-## Activation & Configation
-
-### OXID 6.1 and lower
-
-* Open the OXID admin and activate the module Findologic - Search & Navigation Platform.
-* Click on Settings and insert the shop key provided by Findologic and press save.
-* Clear shop cache or remove tmp files with
-```bash
-rm <shop_directory>/source/tmp/*
-```
-
-### OXID 6.2 and higher
-
-* Open the OXID admin and activate the module Findologic - Search & Navigation Platform.
-* Generate configuration files:
-```bash
-vendor/bin/oe-console oe:module:apply-configuration
-```
-* Edit the generated configuration file in `var/configuration/shops/<shop-id>.yaml`.
-* Search for `findologic_module` and insert the shop key provided by Findologic:
-```yaml
-# ...
-  findologic_module:
-   id: findologic_module
-   # ...
-   moduleSettings:
-    FindologicShopkey_0:
-     group: shopkey
-     type: str
-     value: '<your-de-shopkey>'
-    FindologicShopkey_1:
-     group: shopkey
-     type: str
-     value: '<your-en-shopkey>'
-    # If you have more languages, this list may be longer.
-    # ...
-# ...
-```
-* Clear shop cache or remove tmp files with
-```bash
-rm <shop_directory>/source/tmp/*
-```
+* See [Findologic docs](https://docs.findologic.com/doku.php?id=integration_documentation:plugin:en:direct_integration:oxid).
 
 ## Deployment & Release
 
